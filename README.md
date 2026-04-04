@@ -45,10 +45,10 @@ Our impact is best told by the students who are now pursuing their dreams across
 > 
 > *Translation: "They deal perfectly. They helped me organize my academic path when I thought I didn't have a shot at getting into college."*
 
----
 
-## 🚀 Future Leaders (Class of '27 & '28)
-Don't wait until the last minute. Whether you are looking for STEM tutoring, scholarship lists, or help choosing a UPR campus, we are here to help you navigate the process.
+
+## 🚀 Future Leaders
+Don't wait until the last minute. Whether you are looking for STEM tutoring, scholarship lists, or help choosing a campus, we are here to help you navigate the complete process, at no charge: forever.
 
 ## ✉️ Contact
 For inquiries, tutoring requests, or to join our mission, reach out to us:
