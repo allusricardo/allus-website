@@ -1,5 +1,7 @@
 # Welcome To AllUs (EST. 2022) 
-### Empowering the next generation of STEM leaders.
+### Empowering the next generation of Puerto Rican STEM leaders.
+
+![The AllUs Mission](https://image2url.com/r2/default/images/1775264452179-b7a23f88-3b94-43be-89f4-793885f8488d.png)
 
 ---
 
@@ -24,6 +26,29 @@ We are proud of the community we have built and the tangible impact we have made
 * **$120,000+ in Scholarships/Aid** secured for our students.
 
 ---
+
+## 💬 Student Testimonials
+Our impact is best told by the students who are now pursuing their dreams across the UPR system.
+
+> **"Gracias a AllUs, logré entrar al RUM. El apoyo con el College Board fue clave para no pichar con la meta."**
+> — *Class of '25, UPR Mayagüez (Mechanical Engineering)*
+> 
+> *Translation: "Thanks to AllUs, I made it into the 'Colegio' of Mayagüez. The support with the College Board was key to not swinging and missing on my goal."*
+
+> **"Estaba bien perdía con las becas, pero Richard y el team me dieron el 'push' que necesitaba para enfermería."**
+> — *Class of '25, UPR Aguadilla (Nursing)*
+> 
+> *Translation: "I was totally lost with the scholarships, but Richard and the team gave me the push I needed for nursing."*
+
+> **"Bregan de show. Me ayudaron a organizar mi ruta académica cuando pensaba que no tenía break para entrar a la uni."**
+> — *Class of '24, UPR Humacao (Wildlife Management/Biology)*
+> 
+> *Translation: "They deal perfectly. They helped me organize my academic path when I thought I didn't have a shot at getting into college."*
+
+---
+
+## 🚀 Future Leaders (Class of '27 & '28)
+Don't wait until the last minute. Whether you are looking for STEM tutoring, scholarship lists, or help choosing a UPR campus, we are here to help you navigate the process.
 
 ## ✉️ Contact
 For inquiries, tutoring requests, or to join our mission, reach out to us:
