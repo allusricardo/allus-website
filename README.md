@@ -53,4 +53,6 @@ Don't wait until the last minute. Whether you are looking for STEM tutoring, sch
 ## ✉️ Contact
 For inquiries, tutoring requests, or to join our mission, reach out to us:
 
-**Instagram:** [@allusrichard](https://instagram.com/allusrichard)
+**Instagram:** [@alluspuertorico](https://instagram.com/alluspuertorico)
+
+**Email:** AllUsPuertoRico@gmail.com
