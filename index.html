@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AllUs Puerto Rico — STEM Education & Mentorship</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-50: #EAF3DE;
+      --green-100: #C0DD97;
+      --green-200: #97C459;
+      --green-600: #3B6D11;
+      --green-800: #27500A;
+      --green-900: #173404;
+      --teal-50: #E1F5EE;
+      --teal-200: #5DCAA5;
+      --teal-600: #0F6E56;
+      --teal-800: #085041;
+      --amber-50: #FAEEDA;
+      --amber-200: #EF9F27;
+      --amber-600: #854F0B;
+      --gray-50: #F1EFE8;
+      --gray-100: #D3D1C7;
+      --gray-200: #B4B2A9;
+      --gray-600: #5F5E5A;
+      --gray-800: #444441;
+      --gray-900: #2C2C2A;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #fafaf7;
+      color: var(--gray-900);
+      line-height: 1.65;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250,250,247,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-100);
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo {
+      font-family: 'Fraunces', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--green-800);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--gray-600);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--green-800); }
+    .nav-cta {
+      background: var(--green-800);
+      color: #fff !important;
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--green-900) !important; color: #fff !important; }
+
+    /* HERO */
+    .hero {
+      min-height: 88vh;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 5rem 2rem 4rem;
+      max-width: 1100px; margin: 0 auto;
+      position: relative;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--teal-600);
+      background: var(--teal-50);
+      padding: 0.35rem 0.85rem; border-radius: 100px;
+      margin-bottom: 1.5rem; width: fit-content;
+    }
+    .hero-eyebrow span { width: 6px; height: 6px; border-radius: 50%; background: var(--teal-200); }
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: var(--gray-900);
+      max-width: 16ch;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--green-600);
+    }
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--gray-600);
+      max-width: 52ch;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-block;
+      background: var(--green-800);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.75rem 1.6rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--green-900); transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      border: 1.5px solid var(--gray-200);
+      color: var(--gray-800);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.75rem 1.6rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--gray-600); color: var(--gray-900); }
+
+    /* STATS BAND */
+    .stats-band {
+      background: var(--green-900);
+      color: #fff;
+      padding: 3.5rem 2rem;
+    }
+    .stats-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+    .stat-num {
+      font-family: 'Fraunces', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--green-100);
+      letter-spacing: -0.03em;
+    }
+    .stat-label {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.65);
+      margin-top: 0.4rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+    .stat-divider {
+      width: 1px; background: rgba(255,255,255,0.1);
+      display: none;
+    }
+    @media (min-width: 600px) { .stat-divider { display: block; } }
+
+    /* SECTIONS */
+    section { padding: 6rem 2rem; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--teal-600);
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      color: var(--gray-900);
+      margin-bottom: 1.25rem;
+    }
+    .section-title em { font-style: italic; font-weight: 300; color: var(--green-600); }
+    .section-body {
+      font-size: 1.05rem;
+      color: var(--gray-600);
+      max-width: 58ch;
+      line-height: 1.75;
+    }
+
+    /* MISSION */
+    .mission-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-top: 3rem;
+    }
+    @media (max-width: 768px) { .mission-grid { grid-template-columns: 1fr; gap: 2rem; } }
+    .mission-pillars { display: flex; flex-direction: column; gap: 1.25rem; }
+    .pillar {
+      display: flex; gap: 1rem; align-items: flex-start;
+      padding: 1.25rem;
+      background: #fff;
+      border: 1px solid var(--gray-100);
+      border-radius: 12px;
+    }
+    .pillar-icon {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: var(--green-50);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.1rem;
+    }
+    .pillar h3 { font-size: 0.95rem; font-weight: 600; color: var(--gray-900); margin-bottom: 0.2rem; }
+    .pillar p { font-size: 0.875rem; color: var(--gray-600); line-height: 1.6; }
+
+    /* TESTIMONIALS */
+    .testimonials-section { background: var(--gray-50); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .testimonial-card {
+      background: #fff;
+      border: 1px solid var(--gray-100);
+      border-radius: 16px;
+      padding: 1.75rem;
+      position: relative;
+    }
+    .quote-mark {
+      font-family: 'Fraunces', serif;
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--green-100);
+      position: absolute;
+      top: 1rem; right: 1.5rem;
+    }
+    .testimonial-text {
+      font-size: 1rem;
+      color: var(--gray-800);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+    .testimonial-translation {
+      font-size: 0.8rem;
+      color: var(--gray-600);
+      border-left: 2.5px solid var(--green-200);
+      padding-left: 0.75rem;
+      margin-bottom: 1.25rem;
+      line-height: 1.6;
+    }
+    .testimonial-meta {
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .avatar {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--green-50);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.75rem; font-weight: 600; color: var(--green-800);
+    }
+    .meta-name { font-size: 0.875rem; font-weight: 600; color: var(--gray-900); }
+    .meta-sub { font-size: 0.78rem; color: var(--gray-600); }
+
+    /* CTA */
+    .cta-section {
+      background: var(--green-900);
+      color: #fff;
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+    .cta-section .section-label { color: var(--green-100); opacity: 0.7; }
+    .cta-section .section-title { color: #fff; max-width: 16ch; margin: 0 auto 1rem; }
+    .cta-section .section-title em { color: var(--green-100); }
+    .cta-section p { color: rgba(255,255,255,0.65); max-width: 48ch; margin: 0 auto 2.5rem; font-size: 1.05rem; }
+    .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-light {
+      display: inline-block;
+      background: #fff;
+      color: var(--green-900);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600; font-size: 0.95rem;
+      padding: 0.75rem 1.6rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-light:hover { background: var(--green-50); }
+    .btn-outline-light {
+      display: inline-block;
+      background: transparent;
+      border: 1.5px solid rgba(255,255,255,0.3);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500; font-size: 0.95rem;
+      padding: 0.75rem 1.6rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+    .btn-outline-light:hover { border-color: rgba(255,255,255,0.6); }
+
+    /* FOOTER */
+    footer {
+      background: var(--gray-900);
+      color: rgba(255,255,255,0.5);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      font-size: 0.875rem;
+    }
+    footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    footer a:hover { color: rgba(255,255,255,0.8); }
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; gap: 1rem;
+      justify-content: space-between; align-items: center;
+    }
+    .footer-logo { font-family: 'Fraunces', serif; font-size: 1.1rem; color: rgba(255,255,255,0.7); font-weight: 700; }
+    .footer-links { display: flex; gap: 1.5rem; }
+
+    /* DECORATIVE BG */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -80px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--green-50) 0%, transparent 70%);
+      pointer-events: none; z-index: -1;
+    }
+
+    /* YEAR BADGE */
+    .est-badge {
+      position: absolute; bottom: 3rem; right: 2rem;
+      font-family: 'Fraunces', serif;
+      font-size: 0.75rem;
+      color: var(--gray-200);
+      letter-spacing: 0.08em;
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+    }
+
+    @media (max-width: 640px) {
+      nav { padding: 0 1rem; }
+      .nav-links { display: none; }
+      .hero, .section-inner { padding-left: 1.25rem; padding-right: 1.25rem; }
+      .est-badge { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">AllUs</a>
+    <ul class="nav-links">
+      <li><a href="#mission">Our Mission</a></li>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#testimonials">Students</a></li>
+      <li><a href="#contact" class="nav-cta">Get Involved</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">
+      <span></span>
+      Founded in Puerto Rico, 2022
+    </div>
+    <h1>Empowering the next generation of <em>Puerto Rican STEM leaders.</em></h1>
+    <p class="hero-sub">Free 1-on-1 STEM mentorship, scholarship guidance, and personalized academic paths for students in underserved communities across Puerto Rico.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Get Free Support →</a>
+      <a href="#mission" class="btn-secondary">Learn About AllUs</a>
+    </div>
+    <span class="est-badge">Est. 2022 — Puerto Rico</span>
+  </section>
+
+  <!-- STATS BAND -->
+  <div class="stats-band">
+    <div class="stats-inner">
+      <div>
+        <div class="stat-num">230+</div>
+        <div class="stat-label">Students Served</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div>
+        <div class="stat-num">$130K+</div>
+        <div class="stat-label">Scholarships &amp; Aid Secured</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div>
+        <div class="stat-num">30+</div>
+        <div class="stat-label">Personalized Career Paths</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div>
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Staff &amp; Peer Tutors</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MISSION -->
+  <section id="mission">
+    <div class="section-inner">
+      <p class="section-label">Our Mission</p>
+      <h2 class="section-title">Built for students who <em>deserve more.</em></h2>
+      <p class="section-body">AllUs was founded in 2022 by Jacob Rivera, then a freshman at a STEM-specialized high school in Puerto Rico, to make college and career guidance accessible to students who had nowhere else to turn.</p>
+
+      <div class="mission-grid">
+        <div>
+          <p style="font-size:1.05rem; color:var(--gray-600); line-height:1.75; margin-bottom:1.5rem;">
+            What started as a local initiative grew into a structured program now serving two schools in East Puerto Rico — and counting. We believe that a student's zip code should never determine their ceiling.
+          </p>
+          <p style="font-size:1.05rem; color:var(--gray-600); line-height:1.75;">
+            Every service we offer — tutoring, scholarship advising, academic planning — is and will always be <strong style="color:var(--gray-900);">completely free.</strong>
+          </p>
+        </div>
+        <div class="mission-pillars">
+          <div class="pillar">
+            <div class="pillar-icon">🎓</div>
+            <div>
+              <h3>College Advising</h3>
+              <p>From College Board prep to application strategy, we guide students through every step of the admissions process.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🔬</div>
+            <div>
+              <h3>STEM Tutoring</h3>
+              <p>1-on-1 peer tutoring in math, science, and engineering subjects — from a team that knows these subjects from the inside out.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">💰</div>
+            <div>
+              <h3>Scholarship Navigation</h3>
+              <p>We help students find, apply for, and secure aid — demystifying a process that stops too many students from even trying.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🗺️</div>
+            <div>
+              <h3>Career Path Mapping</h3>
+              <p>Personalized academic roadmaps built for each student's interests, skills, and goals within Puerto Rico's UPR system and beyond.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="section-inner">
+      <p class="section-label">Student Voices</p>
+      <h2 class="section-title">Straight from the <em>students we serve.</em></h2>
+      <p class="section-body">Our impact is best measured in the stories of students who are now pursuing their dreams across the UPR system.</p>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text">"Gracias a AllUs, logré entrar al RUM. El apoyo con el College Board fue clave para no pichar con la meta."</p>
+          <p class="testimonial-translation">Thanks to AllUs, I made it into UPR Mayagüez. The support with the College Board was key to not missing my goal.</p>
+          <div class="testimonial-meta">
+            <div class="avatar">RM</div>
+            <div>
+              <div class="meta-name">Class of '25</div>
+              <div class="meta-sub">UPR Mayagüez — Mechanical Engineering</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text">"Estaba bien perdía con las becas, pero Richard y el team me dieron el 'push' que necesitaba para enfermería."</p>
+          <p class="testimonial-translation">I was totally lost with scholarships, but Richard and the team gave me the push I needed for nursing.</p>
+          <div class="testimonial-meta">
+            <div class="avatar">EA</div>
+            <div>
+              <div class="meta-name">Class of '25</div>
+              <div class="meta-sub">UPR Aguadilla — Nursing</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text">"Bregan de show. Me ayudaron a organizar mi ruta académica cuando pensaba que no tenía break para entrar a la uni."</p>
+          <p class="testimonial-translation">They're incredible. They helped me map my academic path when I thought I had no shot at getting into college.</p>
+          <div class="testimonial-meta">
+            <div class="avatar">JH</div>
+            <div>
+              <div class="meta-name">Class of '24</div>
+              <div class="meta-sub">UPR Humacao — Wildlife Management / Biology</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text">"Durante mi tiempo con AllUs pude ver de primera mano los recursos que se podrían ofrecer a nuestra juventud, y me llena de orgullo y pasión ver el desarrollo de este programa a través de los últimos años de escuela superior."</p>
+          <p class="testimonial-translation">During my time with AllUs I was able to see firsthand the resources that could be offered to our youth, and it fills me with pride and passion to see the growth of this program throughout these last years of high school.</p>
+          <div class="testimonial-meta">
+            <div class="avatar">DR</div>
+            <div>
+              <div class="meta-name">Derick Rivera — Tutor</div>
+              <div class="meta-sub">Class of '26 — Mechanical Engineering</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACT -->
+  <section id="contact" class="cta-section">
+    <p class="section-label">Get Involved</p>
+    <h2 class="section-title">Don't wait until <em>the last minute.</em></h2>
+    <p>Whether you're looking for STEM tutoring, help with scholarships, or a personalized plan for your future — we are here, at no charge, forever.</p>
+    <div class="cta-actions">
+      <a href="mailto:AllUsPuertoRico@gmail.com" class="btn-light">Email Us →</a>
+      <a href="https://instagram.com/alluspuertorico" class="btn-outline-light">@alluspuertorico on Instagram</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">AllUs</span>
+      <span>Empowering Puerto Rican STEM leaders since 2022.</span>
+      <div class="footer-links">
+        <a href="mailto:AllUsPuertoRico@gmail.com">AllUsPuertoRico@gmail.com</a>
+        <a href="https://instagram.com/alluspuertorico">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
